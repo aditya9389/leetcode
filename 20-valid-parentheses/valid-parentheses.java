@@ -1,6 +1,3 @@
-//copied but understandable also learn stack in java to use this 
-
-
 class Solution {
     public boolean isValid(String s) {
         Stack<Character> stk = new Stack<Character>();
@@ -21,3 +18,5 @@ class Solution {
         return false;
     }
 }
+//copied but understandable also learn stack in java to use this 
+
