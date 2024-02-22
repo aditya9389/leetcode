@@ -3,13 +3,13 @@ class Solution {
         int[] trustcount = new int[n + 1];
 
         for (int[] relation : trust) {
-            trustcount[relation[0]]--;
+            trustcount[relation[0]]--;      //required
             trustcount[relation[1]]++;
         }
 
         for (int i = 1; i <= n; ++i) {
-            if (trustcount[i] == n - 1) {
-                return i;
+            if (trustcount[i] == n - 1) {        //array id defiend for the values itself so
+                return i;                        //i is returning the answer itself 
             }
         }
 
