@@ -1,3 +1,15 @@
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        if(n<=0){
+            return false;
+        }
+        return (n & (n-1))==0;
+        
+    }
+}
+//best one
+
+
 //power function with 0(1) cpomplexity but noob
 // public class Solution {
 //     public boolean isPowerOfTwo(int n) {
@@ -11,17 +23,17 @@
 //     }
 // }
 
-public class Solution {
-    public boolean isPowerOfTwo(int n) {
-        int x = 1;
-        while (x <= n) {
-            if (x == n) return true;
-            if (x > Integer.MAX_VALUE / 2) break;
-            x = x << 1;
-        }
-        return false;
-    }
-}
+// public class Solution {
+//     public boolean isPowerOfTwo(int n) {
+//         int x = 1;
+//         while (x <= n) {
+//             if (x == n) return true;
+//             if (x > Integer.MAX_VALUE / 2) break;
+//             x = x << 1;
+//         }
+//         return false;
+//     }
+//}
 //shift operator gg
 
 // public class Solution {
