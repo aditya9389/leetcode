@@ -7,8 +7,8 @@ class Solution {
             words.put(w,words.getOrDefault(w,0)+1);
         for(char w: t.toCharArray())
             words.put(w,words.getOrDefault(w,0)-1);
-        for(Map.Entry<Character,Integer> entries : words.entrySet())
-        if(entries.getValue()!=0)
+        for(int val:words.values())
+        if(val!=0)
         return false;
 
         return true;
