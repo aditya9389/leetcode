@@ -21,3 +21,4 @@ class Solution {
         return max;
     }
 }
+//sliding window well goodunderstandable but still learn it more
