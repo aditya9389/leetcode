@@ -26,16 +26,16 @@ class Solution {
                 wordToChar.put(word, ch);
             }
         }
-        int i=0;
-        for(char ch:pattern.toCharArray())
-        {
-            String ss=charToWord.get(ch);
-            if(!ss.equals(sarr[i]))
-            {
-                return false;
-            }
-            i++;
-        }
+        // int i=0;
+        // for(char ch:pattern.toCharArray())
+        // {
+        //     String ss=charToWord.get(ch);
+        //     if(!ss.equals(sarr[i]))
+        //     {
+        //         return false;
+        //     }
+        //     i++;
+        // }
         return true;
     }
 }
