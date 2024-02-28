@@ -13,13 +13,13 @@
  *     }
  * }
  */
-public class Solution {
+
+public class Solution{
     public int findBottomLeftValue(TreeNode root) {
         int last = 0;
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
-
-        while (!q.isEmpty()) {
+        while(!q.isEmpty()) {
             int count = q.size();
             for (int i = 0; i < count; i++) {
                 TreeNode curr = q.poll();
@@ -34,3 +34,5 @@ public class Solution {
         return last;
     }
 }
+
+//do it again, didnt even read
