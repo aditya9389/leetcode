@@ -8,25 +8,25 @@ class Solution {
         return false;
         Map<Character,String> charToWord= new HashMap<>();
         Map<String,Character> wordToChar= new HashMap<>();
-        for (int i = 0; i < pl; i++) {
+        for (int i = 0; i < pl; i++)
+        {
             char ch = pattern.charAt(i);
             String word = sarr[i];
-
             if (charToWord.containsKey(ch)) {
                 if (!charToWord.get(ch).equals(word))
                     return false;
-            } else {
+            } 
+            else 
                 charToWord.put(ch, word);
-            }
 
             if (wordToChar.containsKey(word)) {
                 if (wordToChar.get(word) != ch)
                     return false;
-            } else {
+            } 
+            else 
                 wordToChar.put(word, ch);
-            }
         }
-        // int i=0;
+        // int i=0;                 //no need 
         // for(char ch:pattern.toCharArray())
         // {
         //     String ss=charToWord.get(ch);
