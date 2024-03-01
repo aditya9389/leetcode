@@ -46,3 +46,4 @@ class Solution {
         }
     
 }
+//dont know i think i copoied it
