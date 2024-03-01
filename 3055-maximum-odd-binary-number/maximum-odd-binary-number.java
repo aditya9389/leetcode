@@ -23,4 +23,4 @@ class Solution {
     }
 }
 //lol i did it with maps but we can normally count 1,0 as only two needed to get count
-// understandable and self did with map this one copied :)
+// understandable and self did with map this one copied although very same logic :)
