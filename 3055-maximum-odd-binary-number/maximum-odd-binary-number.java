@@ -1,26 +1,26 @@
 class Solution {
-    public String maximumOddBinaryNumber(String s)
-    {
-        Map<Character,Integer> count= new HashMap<>();
-        for(char i:s.toCharArray())
-            count.put(i,count.getOrDefault(i,0)+1);
-        StringBuilder ans=new StringBuilder("");
-        count.put('1',count.get('1')-1);
-        while(count.getOrDefault('0',0)>0||count.getOrDefault('1',0)>0)
-        {
-            if(count.getOrDefault('1',0)>0)
-            {
-                ans.append("1");
-                count.put('1',count.get('1')-1);
+    public String maximumOddBinaryNumber(String s) {
+        int count1 = 0;
+        int count0 = 0;
+        for (char ch : s.toCharArray()) {
+            if (ch == '1') {
+                count1++;
             }
-            else if(count.getOrDefault('0',0)>0)
-            {
-                ans.append("0");
-                count.put('0',count.get('0')-1);
+            else {
+                count0++;
             }
         }
-        ans.append('1');
-        return ans.toString();
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < count1 - 1; i++) {
+            result.append('1');
+        }
+        for (int i = 0; i < count0; i++) {
+            result.append('0');
+        }
+        result.append('1');
+        
+        return result.toString();
     }
-    
 }
+//lol i did it with maps but we can normally count 1,0 as only two needed to get count
+// understandable and self did with map this one copied :)
