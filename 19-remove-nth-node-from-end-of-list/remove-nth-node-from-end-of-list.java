@@ -35,4 +35,4 @@ public class Solution {
         return dummy.next;
     }
 }
-//copied but i was also doing the same just took the sysntex and understable and learned
+//copied but i was also doing the same just took the syntex and understable and learned
