@@ -24,3 +24,4 @@ class Solution {
         return ans;
     }
 }
+//done by myself in 1st try 
