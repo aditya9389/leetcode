@@ -10,7 +10,8 @@ class Solution {
         return nums[0];
     }
 }
-//this one is copied but working better and understandable
+//this one is copied but working better and understandable o(n)
+
 // class Solution {
 //     public int findDuplicate(int[] nums) {
 //         Arrays.sort(nums);
@@ -22,4 +23,4 @@ class Solution {
 //         return -1;
 //     }
 // }
-//this one was my solution
+//this one was my solution o(n) but it modify arr so no this is not valid
