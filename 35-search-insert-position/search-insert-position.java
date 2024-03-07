@@ -13,6 +13,6 @@ class Solution {
             j=mid-1;
         }
         return i;
-
     }
 }
+//self done easy binary search
