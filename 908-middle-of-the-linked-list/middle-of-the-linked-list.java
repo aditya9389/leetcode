@@ -20,12 +20,11 @@ class Solution {
     public ListNode middleNode(ListNode head) {
         if(head.next==null)
         return head;
-        ListNode temp= head;
         int len=len(head);
         System.out.println(len);
         for(int i=0;i<len/2;i++)
-        temp= temp.next;
-        return temp;
+        head= head.next;
+        return head;
     }
 }
 //self done very easy
