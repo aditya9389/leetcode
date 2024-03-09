@@ -21,10 +21,10 @@ class Solution {
                 nums[i]=0;
             }
             else{
-                if(nums[i]!=0)
                 nums[i]=pro/nums[i];
             }
         }
         return nums;    
     }
 }
+//self done tought in college
