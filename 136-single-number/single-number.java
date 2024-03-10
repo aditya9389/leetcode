@@ -16,4 +16,6 @@ class Solution {
         return nums[startIndex]^xorFunction(startIndex + 1,nums);
     } //not used in this code but this one is best 
 }
-//self done xor func is copied but good
+//self done and this is i guess a jugad main method we can use
+//is hashmap but this not good for follow up which as for
+//constant space so best is xor func which  is copied but good
