@@ -8,5 +8,12 @@ class Solution {
             i++;
         }
         return nums[nums.length-1];
+        //return xorFunction(0,nums);
     }
+    public int xorFunction(int startIndex, int[] nums){
+        if(startIndex >= nums.length)
+            return 0;
+        return nums[startIndex]^xorFunction(startIndex + 1,nums);
+    } //not used in this code but this one is best 
 }
+//self done xor func is copied but good
