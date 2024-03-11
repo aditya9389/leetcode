@@ -9,7 +9,7 @@ class Solution {
             int j = i + 1;
             int k = nums.length - 1;
 
-            while (j < k) {
+            while (j < k) {             //required
                 int sum = nums[i] + nums[j] + nums[k];
 
                 if (Math.abs(target - sum) < Math.abs(target - closestSum)) {
