@@ -7,3 +7,4 @@ class Solution {
         else return -1;
     }
 }
+//copied didnt read yet
