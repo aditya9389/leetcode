@@ -40,3 +40,4 @@ class Solution {
         }
     }
 }
+//self done ran in first try
