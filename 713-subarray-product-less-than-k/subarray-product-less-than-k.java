@@ -18,3 +18,5 @@ class Solution {
         return count;
     }
 }
+//well copied but well undertood when i heard sliding window i was trying 
+//to do similar in start but 1+(j-i) formula was not knowm to me
