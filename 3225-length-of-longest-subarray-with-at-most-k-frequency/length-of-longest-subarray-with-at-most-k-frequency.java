@@ -15,3 +15,4 @@ class Solution {
         return ans;
     }
 }
+//sliding window well understood little copied but was trying to do the same
