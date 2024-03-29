@@ -14,14 +14,16 @@ class Solution {
             {
                 count++;
             }
-            while(count>=k){
-            ans+=nums.length-j;
-            if(nums[i]==max)
-            count--;
-            i++;
+            while(count>=k)
+            {
+                ans+=nums.length-j;
+                if(nums[i]==max)
+                count--;
+                i++;
             }
             j++;
         }
         return ans;
     }
 }
+//slef done just took a little help for this ans=n-j shit
