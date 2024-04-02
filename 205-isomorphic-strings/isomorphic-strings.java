@@ -17,3 +17,4 @@ class Solution {
         return true;
     }
 }
+//self done didnt even looked
