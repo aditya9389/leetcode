@@ -1,42 +1,27 @@
-public class Solution {
+class Solution {
     public boolean exist(char[][] board, String word) {
-        int m = board.length;
-        int n = board[0].length;
-
-        boolean[][] visited = new boolean[m][n];
-        boolean result = false;
-        
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (board[i][j] == word.charAt(0)) {
-                    result = backtrack(board, word, visited, i, j, 0);
-                    if (result) return true;
+        char[] s = word.toCharArray();
+        int n = board.length, m = board[0].length, l = s.length;
+        boolean[][] dp = new boolean[n][m];
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < m; j++) {
+                if(board[i][j] == s[0]) {
+                    if(helper(i, j, 0, s, board, dp, n, m, l)) return true;
                 }
             }
         }
-        
         return false;
     }
-    
-    private boolean backtrack(char[][] board, String word, boolean[][] visited, int i, int j, int index) {
-        if (index == word.length()) {
-            return true;
-        }
-        
-        if (i < 0 || i >= board.length || j < 0 || j >= board[0].length || visited[i][j] || board[i][j] != word.charAt(index)) {
-            return false;
-        }
-        
-        visited[i][j] = true;
-        
-        if (backtrack(board, word, visited, i + 1, j, index + 1) ||
-            backtrack(board, word, visited, i - 1, j, index + 1) ||
-            backtrack(board, word, visited, i, j + 1, index + 1) ||
-            backtrack(board, word, visited, i, j - 1, index + 1)) {
-            return true;
-        }
-        
-        visited[i][j] = false;
+    private boolean helper(int i, int j, int pos, char[] s, char[][] board, boolean[][] dp, int n, int m, int l) {
+        if(i >= n || i < 0 || j >= m || j < 0 || dp[i][j] || pos >= l || board[i][j] != s[pos]) return false;
+        if(pos == l-1) return true;
+        dp[i][j] = true;
+        if( helper(i-1, j, pos+1, s, board, dp, n, m, l)
+            || helper(i, j+1, pos+1, s, board, dp, n, m, l)
+            || helper(i+1, j, pos+1, s, board, dp, n, m, l)
+            || helper(i, j-1, pos+1, s, board, dp, n, m, l)) 
+                return true;
+        dp[i][j] = false;;
         return false;
     }
 }
