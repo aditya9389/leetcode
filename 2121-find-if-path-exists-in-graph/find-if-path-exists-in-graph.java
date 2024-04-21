@@ -1,29 +1,20 @@
 class Solution {
     public boolean validPath(int n, int[][] edges, int source, int destination) {
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            graph.computeIfAbsent(u, k -> new ArrayList<>()).add(v);
-            graph.computeIfAbsent(v, k -> new ArrayList<>()).add(u);
-        }
-        
-        Set<Integer> visited = new HashSet<>();
-        return dfs(source, destination, graph, visited);
-    }
-    
-    private boolean dfs(int node, int destination, Map<Integer, List<Integer>> graph, Set<Integer> visited) {
-        if (node == destination) {
-            return true;
-        }
-        visited.add(node);
-        for (int neighbor : graph.getOrDefault(node, new ArrayList<>())) {
-            if (!visited.contains(neighbor)) {
-                if (dfs(neighbor, destination, graph, visited)) {
-                    return true;
-                }
+        if(edges.length == 0) return true;
+        boolean[] visited = new boolean[n];
+        boolean flag = true;
+        visited[source] = true;
+    while(flag){
+        flag = false;
+        for(int[] edge : edges){
+            if(visited[edge[0]] != visited[edge[1]]){
+                visited[edge[0]] = true;
+                visited[edge[1]] = true;
+                flag = true;
             }
+            if(visited[destination]) return true;
         }
-        return false;
+    }
+    return false;
     }
 }//didnt even read
