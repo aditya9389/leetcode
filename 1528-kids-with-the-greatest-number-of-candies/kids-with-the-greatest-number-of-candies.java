@@ -16,3 +16,4 @@ class Solution {
         return res;
     }
 }
+//self done well it was simple as hell
