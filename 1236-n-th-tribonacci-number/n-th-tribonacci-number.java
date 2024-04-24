@@ -17,4 +17,17 @@ class Solution {
         return three;
     }
 }
-//self done didnt even looked
+//self done didnt even 
+
+//down words are copiied but good first one is with recursion
+// class Solution {
+//     public int tribonacci(int n) {
+//         if (n == 0) {
+//             return 0;
+//         } else if (n == 1 || n == 2) {
+//             return 1;
+//         } else {
+//             return tribonacci(n - 1) + tribonacci(n - 2) + tribonacci(n - 3);
+//         }
+//     }
+// }
