@@ -38,3 +38,4 @@ class Solution {
 
     }
 }
+//self done just took some new things like that string compparing with indexof 
