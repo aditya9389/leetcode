@@ -1,7 +1,6 @@
 class Solution {
     public int numRescueBoats(int[] people, int limit) {
         int count=0;
-        int w=0;
         int i=0,j=people.length-1;
         if(j==0)
         return 0;
@@ -22,3 +21,4 @@ class Solution {
         return count;
     }
 }
+//self done did took a little help
