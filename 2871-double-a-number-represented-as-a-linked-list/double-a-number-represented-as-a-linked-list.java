@@ -25,3 +25,4 @@ public class Solution {
         return head;
     }
 }
+//self did just took a little help to for recursion part..this code is still copied tho
