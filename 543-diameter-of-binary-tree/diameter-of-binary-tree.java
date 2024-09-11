@@ -18,7 +18,8 @@ class Solution {
         int dia[]= {0};
         if(root==null)
         return dia[0];
-        int ans=height(root,dia);
+        //int ans=height(root,dia);
+        maxdia(root,dia);
         return dia[0];
     }
     public int height(TreeNode root,int[] dia)
@@ -31,4 +32,16 @@ class Solution {
         dia[0]=Math.max(dia[0],maxl+maxr);
         return 1+Math.max(maxr,maxl);
     }
+    public void maxdia(TreeNode root,int[] dia)
+    {//naive,,,o(n^2)..very bad
+        if(root==null)
+        return ;
+        int maxl=height(root.left,dia);
+        int maxr=height(root.right,dia);
+        dia[0]=Math.max(dia[0],maxl+maxr);
+        maxdia(root.left,dia);
+        maxdia(root.right,dia);
+    }
 }
+//self done
+
