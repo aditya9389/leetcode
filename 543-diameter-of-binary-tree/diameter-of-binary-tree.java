@@ -18,8 +18,8 @@ class Solution {
         int dia[]= {0};
         if(root==null)
         return dia[0];
-        //int ans=height(root,dia);
-        maxdia(root,dia);
+        int ans=height(root,dia);
+        // maxdia(root,dia);
         return dia[0];
     }
     public int height(TreeNode root,int[] dia)
