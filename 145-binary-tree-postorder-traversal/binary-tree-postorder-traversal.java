@@ -19,19 +19,27 @@ class Solution {
         List<Integer> res= new LinkedList<>();
         if(root==null)
         return res;
-        // TreeNode curr= root;
-        // while(!st.isEmpty()||curr!=null)
-        // {
-        //     while(curr!=null)
-        //     {
-        //         st.push(curr);
-        //         curr=curr.left;
-        //     }
-        //     curr= st.pop();
-        //     res.add(curr.val);
-        //     curr=curr.right;
-        // }
-         postorder(root,res);
+        TreeNode curr= root;
+        TreeNode lastv=null;
+        while(!st.isEmpty()||curr!=null)
+        {
+            if(curr!=null)
+            {
+                st.push(curr);
+                curr=curr.left;
+            }
+            else
+            {
+                TreeNode peeknode= st.peek();
+                if(peeknode.right!=null&&lastv!=peeknode.right)
+                curr=(peeknode.right);
+                else{
+                        res.add(peeknode.val);
+                        lastv=st.pop();
+                }
+            }
+        }
+        //postorder(root,res);
         return res;
     }
     public static void postorder(TreeNode root,List<Integer> res)
