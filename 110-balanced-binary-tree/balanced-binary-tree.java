@@ -34,3 +34,4 @@ class Solution {
         return 1+Math.max(maxr,maxl);
     }
 }
+//easy  and simple and self done
