@@ -14,19 +14,21 @@
  * }
  */
 class Solution {
-    private int maxDia = 0;
     public int diameterOfBinaryTree(TreeNode root) {
-        findDia(root);
-        return maxDia;
+        int dia[]= {0};
+        if(root==null)
+        return dia[0];
+        int ans=height(root,dia);
+        return dia[0];
     }
-    
-    private int findDia(TreeNode root){
-        if(root == null)return 0;
-        int leftDepth = findDia(root.left);
-        int rightDepth = findDia(root.right);
-        int currDia = leftDepth + rightDepth;
-        maxDia = Math.max(maxDia, currDia);
-        return 1 + Math.max(leftDepth, rightDepth);
+    public int height(TreeNode root,int[] dia)
+    {
+        if(root==null)
+        return 0;
+        int maxl=height(root.left,dia);
+        int maxr=height(root.right,dia);
+
+        dia[0]=Math.max(dia[0],maxl+maxr);
+        return 1+Math.max(maxr,maxl);
     }
 }
-//just copied learn graph then do it
