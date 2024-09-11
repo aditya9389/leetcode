@@ -35,6 +35,7 @@ class Solution {
             
         }
         //bfs(root,0,res);
+        System.gc();
         return res;
 
     }
