@@ -30,3 +30,4 @@ class Solution {
         return 1+Math.max(maxr,maxl);
     }
 }
+//can be done through level order treaversal too but this one simple 
