@@ -23,7 +23,7 @@ class Solution {
         while(!que.isEmpty())
         {
             List<Integer> level=new LinkedList<>();
-            int qsize=que.size();
+            int qsize=que.size();//take size here bcz que size changes throughout he loop
             for(int i=0;i<qsize;i++)
             {//this loop to put nodes levelwise...
             TreeNode temp= que.poll();
@@ -34,8 +34,29 @@ class Solution {
             res.add(level);
             
         }
+        //bfs(root,0,res);
         return res;
 
     }
+
+
+    private void bfs(TreeNode root, int height, List<List<Integer>> out)
+    {
+        if(root==null)  return;
+
+        TreeNode left = (root.left!=null ? root.left : null);
+        TreeNode right = (root.right!=null ? root.right : null);
+        if(height>=out.size()){
+            List<Integer> tmp = new ArrayList<>();
+            out.add(tmp);
+            tmp.add(root.val);
+        }
+        else{
+            out.get(height).add(root.val);
+        }
+
+        bfs(left,height+1,out);
+        bfs(right,height+1,out);
+    }//rescursive copied
 }
 //self done
