@@ -15,7 +15,7 @@
  */
 class Solution {
     public List<Integer> postorderTraversal(TreeNode root) {
-    //  Stack<TreeNode> st=new Stack<>();      //this one is for 1 stack 
+    //  Stack<TreeNode> st=new Stack<>();      //this one is for 1 stack and is best
     //     List<Integer> res= new LinkedList<>();
     //     if(root==null)
     //     return res;
