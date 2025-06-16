@@ -16,17 +16,17 @@
 
 class Solution {
     public int maximumDifference(int[] nums) {
+        int ans=-1;
+        int n = nums.length;
         int min = nums[0];
-        int maxDiff = -1;
-        
-        for (int i = 1; i < nums.length; i++) {
-            if (nums[i] > min) {
-                maxDiff = Math.max(maxDiff, nums[i] - min);
-            } else {
-                min = nums[i];
+        for(int i=1;i<n;i++){
+            int val = nums[i];
+            if(min<val){
+                ans = Math.max(ans,val-min);
             }
-        }
-        return maxDiff;
-    }
+            min = Math.min(min,val);             
+        } 
+        return ans;            
+    }       
 }
 //optimized O(n)
