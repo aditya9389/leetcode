@@ -18,6 +18,5 @@ class Solution {
         return backtrack(nums,maxOR,index+1,currentOR|nums[index])+
                 backtrack(nums,maxOR,index+1,currentOR);
     }
-
-
 }
+//learned and then did
