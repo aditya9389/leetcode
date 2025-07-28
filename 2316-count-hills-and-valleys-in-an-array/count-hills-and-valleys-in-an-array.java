@@ -26,3 +26,4 @@ class Solution {
         return ans;
     }
 }
+//self done but took a lil time like 10 to 15 min
